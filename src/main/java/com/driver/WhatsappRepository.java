@@ -28,6 +28,7 @@ public class WhatsappRepository {
         this.messageId = 0;
     }
 
+    //  creating user
     public String createUser(String name, String mobile) throws Exception {
         if(userMobile.contains(mobile)) {
             throw new Exception("User already exists");
@@ -38,6 +39,7 @@ public class WhatsappRepository {
         return "SUCCESS";
     }
 
+    //
     public Group createGroup(List<User> users){
         if(users.size()==2){
             Group  group=new Group(users.get(1).getName(),2);
